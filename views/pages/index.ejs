@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--******** WELCOME TO MY FIRST FULLY CODED PROJECT. THIS WILL BE A LIVING DOCUMENT, SO THIS MAY BREAK, BUT i HOPE TO EDIT AND DEBUG FULLY BEFORE I UPLOAD TO THE SERVER.
+I named all of my IDs and Classes just gooofy ilke. It really helped me attach in my mind how all three languages talk to each other. (UPDATE) I HAVE FULLY REFINED MY CLASSES AND IDS SINCE LEARNING A BIT OF JS. THEY ARE EASIER TO UNDERSTAND AS MY PROJECT GROWS.
+
+
+ What I've prepared really help me attach how all three languages speak to each other. I doubt my abilities everyday. It keeps me wanting to know more, and contiunue to connect with jQuery, php, and then really dig into front and backend security. These are my desired paths of self education. I have yet to really grasp the full form of javascript. I really am just beginning to tackle the DOM.
+
+ IF YOU ARE VIEWING THIS, THANK YOU FOR TAKING INTEREST. ANY CODE APPLIED WITHIN IS SOMETHING I HAVE STUDIED AND FULLY UNDERSTAND HOW AND WHY IT WORKS. FEEL FREE TO USE WHAT YOU WANT, AND IF I HAVE A COMMENTS THREAD ONE DAY, PLEASE SAY HI AND GIVE ME SUGGESTIONS. i HAVE BEEN PRACTICING HTML, CSS, AND JAVASCRIPT SINCE JULY 2020. CHEERS! -SCOTT WALLACE SNORYDER8019@GMAIL.COM******-->
+<html>
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+	<meta property="og:image" content="a-imageMain/sw.png">
+	<meta property="og:title" content="Web Design ~ Portfolio">
+
+	<meta property="og:description" content="Website Design by: Scott Wallace">
+  <link rel="stylesheet" type="text/css" href="./css/dubSquared.css">
+	<link rel="icon" href="a-imageMain/sw.png" sizes="16x16" type="image/png">
+      <title>Scott Wallace ~ Website Design</title>
+
+  <style>
+     @font-face {
+      font-family:"Fajita";
+      src:url("a-fonts/FjallaOne-Regular.ttf");
+         }
+    @font-face {font-family:"baddy";
+      src:url("a-fonts/RockSalt-Regular.ttf");
+         }
+
+ </style>
+</head>
+<body onload="getTime()">
+	<span id="header"><h1>scottWallace.World</h1></span>
+<%- include('../partials/intro.ejs')%>
+<span class="countdown"><h3 id="timer"></h3></span>
+<%- include('../partials/footer.ejs')%>
+</body>
+</html>
