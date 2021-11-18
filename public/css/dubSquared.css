@@ -1,6 +1,103 @@
 body {
-  background-color: black;
   color: white;
+  background-color: black;
+}
+
+.mainContent {
+  background-color: rgba(115, 85, 255, 0.3);
+  z-index: 1;
+  margin: 1%;
+  padding: 1%;
+}
+
+.background {
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  -webkit-mask-type: alpha;
+  -webkit-mask-position: center;
+  -webkit-mask-image: url("../images/globe.gif");
+  -webkit-mask-size: 600px;
+  background: linear-gradient(to left, grey, blue);
+  background-size: contain;
+}
+
+.imageBlock {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  z-index: 51;
+  border-radius: 50%;
+  min-width: 75px;
+  min-height: 75px;
+  background-color: rgba(115, 85, 255, 0.3);
+  position: fixed;
+  bottom: 4%;
+  left: 3%;
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.button:hover {
+  transform: scale(1.04);
+}
+
+.menu {
+  z-index: 50;
+  background-color: rgba(150, 70, 70, 0.9);
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  min-height: 100vh;
+  min-width: 80vw;
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.cardFront {
+  min-height: 400px;
+  min-width: 100%;
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+  background-color: red;
+  -webkit-backface-visibility: hidden;
+  -webkit-mask-type: alpha;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 600px;
+  background: linear-gradient(to left, grey, blue);
+}
+
+.cardBack {
+  transform: rotateY(-180deg);
+  position: absolute;
+  min-height: 400px;
+  min-width: 100%;
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+  background-color: blue;
+  -webkit-backface-visibility: hidden;
+  -webkit-mask-type: alpha;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 600px;
+  background: linear-gradient(to left, grey, blue);
+}
+
+.cardFront:focus {
+  transform: rotateY(180deg);
+}
+
+.cardBack:focus {
+  transform: rotateY(180deg);
 }
 
 /*# sourceMappingURL=dubSquared.css.map */
