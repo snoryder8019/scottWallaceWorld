@@ -9,15 +9,20 @@ I named all of my IDs and Classes just gooofy ilke. It really helped me attach i
  IF YOU ARE VIEWING THIS, THANK YOU FOR TAKING INTEREST. ANY CODE APPLIED WITHIN IS SOMETHING I HAVE STUDIED AND FULLY UNDERSTAND HOW AND WHY IT WORKS. FEEL FREE TO USE WHAT YOU WANT, AND IF I HAVE A COMMENTS THREAD ONE DAY, PLEASE SAY HI AND GIVE ME SUGGESTIONS. i HAVE BEEN PRACTICING HTML, CSS, AND JAVASCRIPT SINCE JULY 2020. CHEERS! -SCOTT WALLACE SNORYDER8019@GMAIL.COM******-->
 <html>
 <%- include('../partials/head')%>
-
 <body onload="popLoader()">
-<%- include('../partials/header.ejs')%>
-	<div class="mainContent">
-		<div class="cardL">card0</div>
+	<%- include('../partials/header.ejs')%>
+<%- include('../forms/sandbox.ejs')%>
 <%- include('../partials/menu.ejs')%>
 <%- include('../partials/button.ejs')%>
-	<%- include('../partials/footer.ejs')%>
+
+<div>
+<%- include('../partials/sandbox/spinner.ejs')%>
 </div>
+
+
+	<%- include('../partials/footer.ejs')%>
+
 <script src="jsFiles/menu.js"></script>
+<script src="jsFiles/spinner.js"></script>
 </body>
 </html>

@@ -1,32 +1,58 @@
 body {
+  font-family: quest;
   color: white;
   background-color: black;
 }
+body h1 {
+  color: rgba(35, 185, 185, 0.9);
+}
+
+form {
+  width: 100%;
+}
+form select {
+  margin: 1%;
+  paddin: 2%;
+  font-size: 1rem;
+  font-weight: 800;
+  min-height: 50px;
+  width: 89%;
+  color: rgba(150, 170, 170, 0.9);
+  background-color: rgba(150, 70, 70, 0.9);
+}
+form option {
+  margin: 2%;
+  font-size: 1rem;
+  font-weight: 800;
+  min-height: 50px;
+  width: 89%;
+  background-color: rgba(150, 70, 70, 0.9);
+  color: white;
+}
 
 .mainContent {
-  background-color: rgba(115, 85, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 1;
   margin: 1%;
   padding: 1%;
+  position: absolute;
 }
 
-.background {
-  opacity: 0.3;
+.logoFont {
   z-index: -1;
-  position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  -webkit-mask-type: alpha;
-  -webkit-mask-position: center;
-  -webkit-mask-image: url("../images/globe.gif");
-  -webkit-mask-size: 600px;
-  background: linear-gradient(to left, grey, blue);
-  background-size: contain;
+  filter: brightness(0.3);
+  width: 100%;
+  font-family: "mplus";
+  font-size: 2rem;
+  text-shadow: 3px, 3px, black;
+  margin-bottom: 2%;
+  color: rgba(35, 185, 185, 0.9);
+  font-weight: 600;
+}
+@media screen and (min-width: 600px) {
+  .logoFont {
+    font-size: 2rem;
+  }
 }
 
 .imageBlock {
@@ -37,10 +63,14 @@ body {
 
 .button {
   z-index: 51;
-  border-radius: 50%;
-  min-width: 75px;
-  min-height: 75px;
-  background-color: rgba(115, 85, 255, 0.3);
+  min-width: 68px;
+  min-height: 68px;
+  -webkit-mask-type: alpha;
+  -webkit-mask-position: center;
+  -webkit-mask-image: url("../images/globe.gif");
+  -webkit-mask-size: 100px;
+  background: linear-gradient(to left, rgba(35, 185, 185, 0.9), rgba(150, 70, 70, 0.9));
+  background-size: contain;
   position: fixed;
   bottom: 4%;
   left: 3%;
@@ -49,10 +79,15 @@ body {
 }
 
 .button:hover {
-  transform: scale(1.04);
+  transform: scale(1.1);
+  background: linear-gradient(to left, rgba(150, 170, 170, 0.9), white);
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 15px, 15px, 15px, linear-gradient(radial, rgba(200, 200, 200, 0.6), rgba(220, 220, 10, 0.4));
 }
 
 .menu {
+  font-family: mplus;
   z-index: 50;
   background-color: rgba(150, 70, 70, 0.9);
   position: fixed;
@@ -62,6 +97,22 @@ body {
   min-width: 80vw;
   transition-duration: 0.4s;
   transform-style: preserve-3d;
+}
+.menu ul, .menu span {
+  padding: 3%;
+}
+.menu li {
+  font-size: 1.4rem;
+  list-style-type: none;
+  padding-left: 0;
+  font-weight: 800;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: yellow;
 }
 
 .cardFront {
@@ -74,7 +125,7 @@ body {
   -webkit-mask-type: alpha;
   -webkit-mask-position: center;
   -webkit-mask-size: 600px;
-  background: linear-gradient(to left, grey, blue);
+  background: linear-gradient(to left, rgba(35, 185, 185, 0.3), rgba(35, 185, 185, 0.3), rgba(12, 12, 12, 0.9));
 }
 
 .cardBack {
@@ -89,7 +140,7 @@ body {
   -webkit-mask-type: alpha;
   -webkit-mask-position: center;
   -webkit-mask-size: 600px;
-  background: linear-gradient(to left, grey, blue);
+  background: linear-gradient(to left, rgba(35, 185, 185, 0.3), rgba(35, 185, 185, 0.3), rgba(12, 12, 12, 0.9));
 }
 
 .cardFront:focus {
@@ -98,6 +149,184 @@ body {
 
 .cardBack:focus {
   transform: rotateY(180deg);
+}
+
+.resume {
+  margin: 2%;
+  padding: 1%;
+  z-index: 5;
+  background-color: rgba(150, 70, 70, 0.3);
+}
+.resume p {
+  margin: 4%;
+}
+.resume h5 {
+  margin: 0;
+  padding: 0;
+}
+.resume h3 {
+  text-align: center;
+  text-decoration: overline;
+  color: rgba(35, 185, 185, 0.9);
+}
+.resume h6 {
+  text-align: center;
+  margin: 0;
+}
+@media screen and (min-width: 780px) {
+  .resume {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+#techSkills {
+  column-count: 2;
+}
+
+.langLogo {
+  width: 45px;
+  margin: 0 4%;
+}
+
+#tickerbar {
+  position: absolute;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.maskDiv {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: contain;
+  background-color: grey;
+  -webkit-mask-image: url("../images/skyline.png");
+  -webkit-mask-mode: difference;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 200px;
+  -webkit-mask-repeat: space;
+}
+
+#colorDiv {
+  background: linear-gradient(to left, rgba(150, 25, 155, 0.8), rgba(250, 250, 155, 0.4));
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.output {
+  color: rgba(35, 185, 185, 0.9);
+  font-size: 42px;
+  text-overflow: wrap;
+}
+
+#numberOutput {
+  position: fixed;
+  bottom: 5%;
+  color: rgba(35, 185, 185, 0.9);
+}
+
+#tokenHolder {
+  display: block;
+  align-items: center;
+  vertical-align: middle;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#tokenIntro {
+  display: flex;
+  vertical-align: middle;
+  margin: auto;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  /*background:linear-gradient(red,orange,yellow,green,blue,indigo,violet);*/
+  background-image: url("../images/spinner.png");
+  background-size: auto;
+  background-position: center;
+  transform-style: preserve-3d;
+  transition-timing-function: ease;
+  transition-duration: 6s;
+}
+
+.pointer {
+  position: fixed;
+  top: 28%;
+  left: -16%;
+  min-width: 100%;
+  min-height: 50%;
+  z-index: 3;
+  background-image: url("../images/pointer.png");
+  background-repeat: no-repeat;
+  background-position: contain;
+}
+
+#scoreLast {
+  color: rgba(35, 185, 185, 0.9);
+  display: block;
+  position: fixed;
+  right: 3%;
+  width: 8%;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+#historyBit {
+  font-size: 42px;
+  text-overflow: wrap;
+  color: rgba(35, 185, 185, 0.9);
+  position: block;
+  top: 5%;
+  left: 3%;
+  width: 100%;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+#historyBar {
+  color: rgba(35, 185, 185, 0.9);
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  min-width: 8%;
+  height: 80%;
+  text-overflow: wrap;
+}
+
+.canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  border: 1px dotted white;
 }
 
 /*# sourceMappingURL=dubSquared.css.map */
