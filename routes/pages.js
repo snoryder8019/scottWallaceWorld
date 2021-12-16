@@ -1,54 +1,35 @@
 const express = require('express');
 const router = express.Router();
 
+//time variables
+const date = new Date();
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let showTime = hours+':'+minutes;
 
 
-//frontend log checking
-router.get('/scottlogs',(req, res) => {
-  res.render('pages/logs',{title:'Logs'})
-  fs.appendFile('./views/partials/logs.ejs','<br>'+ showTime+' ScottLogs Hit '+req.ip+'\r\n', function (err) {
-      if(err) {throw err};
-      console.log(showTime+'ricklogs route hit & data logged successfully'+req.ip);
+//******HOMEPAGE**********
+router.get('/',(req, res) => {
+  res.render('pages/index',{title:'Homepage'})
+  console.log(showTime+'Index route hit & data logged successfully'+req.ip);
   });
-});
 //contact form
-router.get('/contact',(req, res) => {
-  fs.appendFile('./views/partials/logs.ejs','<br>'+ showTime+' Contact Form Hit '+req.ip, function (err) {
-      if(err) {throw err};
-      console.log(showTime+' Contact route hit & data logged successfully'+req.ip);
-  });
-    res.render('pages/contact',{title:'contact'})
-});
-
 router.get('/sandbox',(req, res) => {
   res.render('pages/sandbox',{title:'sandbox'})
-
-
+  console.log('**************\nsomeone is playing in the sandbox!!  \n'+date)
+});
+router.get('/scottsDash',(req, res) => {
+  res.render('pages/scottsDash',{title:'scotts dash'})
+});
+router.get('/submission',(req, res) => {
+  res.render('pages/submission',{title:'Submitted Successfully'})
 });
 router.get('/masking',(req, res) => {
   res.render('pages/masking',{title:'masking'})
-
-
 });
 router.get('/resume',(req, res) => {
   res.render('pages/resume',{title:'resume'})
   console.log('resume hit')
-
 });
 //frontend log checking
-router.get('/scottlogs',(req, res) => {
-  res.render('pages/logs',{title:'Logs'})
-  fs.appendFile('./views/partials/logs.ejs','<br>'+ showTime+' ScottLogs Hit '+req.ip+'\r\n', function (err) {
-      if(err) {throw err};
-      console.log(showTime+'scotts logs route hit & data logged successfully'+req.ip);
-  });
-});
-//contact form
-router.get('/contact',(req, res) => {
-  fs.appendFile('./views/partials/logs.ejs','<br>'+ showTime+' Contact Form Hit '+req.ip, function (err) {
-      if(err) {throw err};
-      console.log(showTime+' Contact route hit & data logged successfully'+req.ip);
-  });
-    res.render('pages/contact',{title:'contact'})
-});
 module.exports = router;

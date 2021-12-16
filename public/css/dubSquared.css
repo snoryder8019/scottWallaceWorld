@@ -62,7 +62,7 @@ form option {
 }
 
 .button {
-  z-index: 51;
+  z-index: 52;
   min-width: 68px;
   min-height: 68px;
   -webkit-mask-type: alpha;
@@ -84,6 +84,19 @@ form option {
   transition-duration: 0.4s;
   transform-style: preserve-3d;
   box-shadow: 15px, 15px, 15px, linear-gradient(radial, rgba(200, 200, 200, 0.6), rgba(220, 220, 10, 0.4));
+}
+
+.buttonClip {
+  z-index: 51;
+  min-width: 15%;
+  min-height: 180px;
+  -webkit-mask-type: alpha;
+  background-size: contain;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  transition-duration: 0.4s;
+  transform-style: preserve-3d;
 }
 
 .menu {
@@ -170,7 +183,6 @@ form option {
   color: rgba(35, 185, 185, 0.9);
 }
 .resume h6 {
-  text-align: center;
   margin: 0;
 }
 @media screen and (min-width: 780px) {
@@ -186,17 +198,38 @@ form option {
 
 .langLogo {
   width: 45px;
+  min-height: 100%;
   margin: 0 4%;
 }
 
 #tickerbar {
+  filter: brightness(0.3);
   position: absolute;
+  min-height: 45px;
+  width: 1500px;
+  bottom: 38%;
+  right: -80%;
+  margin-left: 55px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.footer {
-  position: absolute;
+#footer {
+  width: 100vw;
+  min-height: 20%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
   bottom: 0;
   overflow: hidden;
+}
+#footer h6 {
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-left: 25%;
 }
 
 .maskDiv {
@@ -229,6 +262,35 @@ form option {
   position: fixed;
   bottom: 5%;
   color: rgba(35, 185, 185, 0.9);
+}
+
+@keyframes twitbanner {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -1000vw;
+    display: none;
+  }
+}
+.tweetBox {
+  border-left: 1px solid white;
+  background: linear-gradient(to left, rgba(25, 25, 25, 0.8), rgba(0, 0, 0, 0));
+  margin: 0;
+  padding: 1%;
+}
+
+.tweetUser {
+  width: 40%;
+  margin-left: 20%;
+  flex-wrap: nowrap;
+  color: blue;
+}
+
+.tweetfeed {
+  color: rgba(150, 70, 70, 0.9);
+  width: 60%;
+  margin-left: 20%;
 }
 
 #tokenHolder {
