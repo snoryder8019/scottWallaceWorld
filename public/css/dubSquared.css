@@ -61,6 +61,12 @@ form option {
   height: auto;
 }
 
+#aeSlides {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .button {
   z-index: 52;
   min-width: 68px;
@@ -386,8 +392,9 @@ form option {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 80%;
+  margin: 10%;
+  min-height: 80vh;
   border: 1px dotted white;
 }
 

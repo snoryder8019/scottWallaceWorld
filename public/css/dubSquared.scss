@@ -115,6 +115,11 @@ filter:brightness(.3);
 .imageBlock{
 width: 100%; max-width: 100%; height: auto;
 }
+#aeSlides{
+  width:100%;
+  padding: 0;
+  margin: 0;
+}
 .button{
   z-index: 52;
 //  border-radius: 50%;
@@ -268,7 +273,6 @@ h6{
 .maskDiv{
   min-height:100vh;
   min-width:100vw;
-
   background-size:contain;
   background-color:grey;
   -webkit-mask-image:url('../images/skyline.png');
@@ -404,7 +408,8 @@ left:3%;
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height:100vh;
+width:80%;
+margin: 10%;
+  min-height:80vh;
   border:1px dotted white;
 }
