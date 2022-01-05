@@ -1,5 +1,5 @@
 body {
-  font-family: quest;
+  font-family: "quest";
   color: white;
   background-color: black;
 }
@@ -40,7 +40,7 @@ form option {
 
 .logoFont {
   z-index: -1;
-  filter: brightness(0.3);
+  filter: brightness(0.7);
   width: 100%;
   font-family: "mplus";
   font-size: 2rem;
@@ -67,6 +67,28 @@ form option {
   margin: 0;
 }
 
+.genericButton {
+  width: 65px;
+  height: 65px;
+  border: 2px solid rgba(35, 185, 185, 0.9);
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transform-style: preserve-3d;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bolder;
+  font-family: "quest";
+}
+
+.genericButton:hover {
+  transform: scale(1.2);
+}
+
+.genericButton:active {
+  transform: scale(1.1);
+}
+
 .button {
   z-index: 52;
   min-width: 68px;
@@ -82,14 +104,30 @@ form option {
   left: 3%;
   transition-duration: 0.4s;
   transform-style: preserve-3d;
+  animation: 4s ease-in 5s hightLightIt;
 }
 
+@keyframes hightLightIt {
+  0% {
+    background: linear-gradient(to left, rgba(115, 85, 255, 0.3), white);
+  }
+  50% {
+    background: linear-gradient(to left, rgba(150, 70, 70, 0.9), white);
+  }
+  100% {
+    background: linear-gradient(to left, rgba(115, 85, 255, 0.3), white);
+  }
+}
 .button:hover {
   transform: scale(1.1);
   background: linear-gradient(to left, rgba(150, 170, 170, 0.9), white);
   transition-duration: 0.4s;
   transform-style: preserve-3d;
   box-shadow: 15px, 15px, 15px, linear-gradient(radial, rgba(200, 200, 200, 0.6), rgba(220, 220, 10, 0.4));
+}
+
+.button:active {
+  transform: scale(1.1);
 }
 
 .buttonClip {
@@ -222,6 +260,7 @@ form option {
 }
 
 #footer {
+  text-align: center;
   width: 100vw;
   min-height: 20%;
   margin: 0;
@@ -231,11 +270,9 @@ form option {
   overflow: hidden;
 }
 #footer h6 {
-  text-align: left;
   position: fixed;
   width: 100%;
   bottom: 0;
-  margin-left: 25%;
 }
 
 .maskDiv {
@@ -396,6 +433,237 @@ form option {
   margin: 10%;
   min-height: 80vh;
   border: 1px dotted white;
+}
+
+#loaderMessage {
+  position: fixed;
+  bottom: 7%;
+  right: 4%;
+}
+
+#loadScreen {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  z-index: 99;
+  width: clamp(100vw,100vw,100vw);
+  height: clamp(100vh,100vh,100vh);
+}
+
+@keyframes loadSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+#loadAnnieDiv0 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 2.6s linear 1s infinite loadSpin;
+}
+
+#loadAnnieDiv1 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 2.4s linear 1.1s infinite loadSpin;
+}
+
+#loadAnnieDiv2 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 2.2s linear 1.2s infinite loadSpin;
+}
+
+#loadAnnieDiv3 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 2s linear 1.3s infinite loadSpin;
+}
+
+#loadAnnieDiv4 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 1.8s linear 1.4s infinite loadSpin;
+}
+
+#loadAnnieDiv5 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 1.6s linear 1.5s infinite loadSpin;
+}
+
+#loadAnnieDiv6 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 1.4s linear 1.6s infinite loadSpin;
+}
+
+#loadAnnieDiv7 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 1.2s linear 1.7s infinite loadSpin;
+}
+
+#loadAnnieDiv8 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 1s linear 1.8s infinite loadSpin;
+}
+
+#loadAnnieDiv9 {
+  position: fixed;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  margin-left: 40%;
+  margin-top: 40%;
+  transition-duration: 3s;
+  animation: 0.8s linear 1.9s infinite loadSpin;
+}
+
+.divDot {
+  position: absolute;
+  width: clamp(8px,8px,8px);
+  height: clamp(8px,8px,8px);
+  border-radius: 50%;
+  background-color: rgba(150, 70, 70, 0.9);
+}
+
+#divDot0 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot2 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot3 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot4 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot5 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot6 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot7 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot8 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#divDot9 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-45px);
+  }
+  50% {
+    opacity: 10%;
+    transform: translateX(-45px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(-5px);
+  }
+  50% {
+    opacity: 10%;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+.indexTitle0 {
+  animation: 1.8s ease-in 5s slideInFromTop;
+}
+
+.indexTitle1 {
+  animation: 1.2s ease-out 5s slideInFromLeft;
 }
 
 /*# sourceMappingURL=dubSquared.css.map */
