@@ -4,6 +4,9 @@ var aeGroup = [
 '../images/cq.mp4',
 '../images/logos.mp4',
 '../images/royal.mp4',
+'../images/atSea.mp4',
+'../images/royal.mp4',
+'../images/nowHiring_Square.gif',
 
 ];
 let x=0;
