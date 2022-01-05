@@ -1,19 +1,22 @@
 let ae= document.getElementById('aeSlides');
 var aeGroup = [
+  '../images/nye.mp4',
 '../images/cq.mp4',
 '../images/logos.mp4',
 '../images/royal.mp4',
-'../images/nye.mp4',
-'../images/globe.gif',
+
 ];
 let x=0;
 function slider(){
-  if(x>aeGroup.length){
+  let aeTitlte = document.getElementById('aeTitle');
+  if(x>=aeGroup.length&&x!=0){
     x=0;
+    aeTitle.innerHTML=aeGroup[x];
     ae.src=aeGroup[x];
     ae.alt=aeGroup[x];
   }
 else{
+    aeTitle.innerHTML=aeGroup[x];
 ae.src=aeGroup[x];
 ae.alt=aeGroup[x];
 console.log(aeGroup[x])
