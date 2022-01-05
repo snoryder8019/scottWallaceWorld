@@ -1,12 +1,13 @@
 let ae= document.getElementById('aeSlides');
 var aeGroup = [
+  // ***** .mp4 format only
   '../images/nye.mp4',
 '../images/cq.mp4',
 '../images/logos.mp4',
 '../images/royal.mp4',
 '../images/atSea.mp4',
 '../images/royal.mp4',
-'../images/nowHiring_Square.gif',
+
 
 ];
 let x=0;
