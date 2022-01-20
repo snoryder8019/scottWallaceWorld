@@ -115,7 +115,7 @@ filter:brightness(.7);
   color:$swwTeal9;
   font-weight:600;
   @media screen and(min-width:600px){
-      font-size: 2rem;
+      font-size: 1.8rem;
   }
 }
 .imageBlock{
@@ -181,7 +181,7 @@ font-family:"quest"
     transform: scale(1.1);
 }
 .buttonClip{
-  z-index: 51;
+//  z-index: 51;
 //  border-radius: 50%;
   min-width: 15%;
   min-height: 180px;
@@ -208,6 +208,10 @@ font-family:"quest"
   ul , span{
     padding:3%;
   }
+  .menuList{
+  ul{  z-index: 60
+  }
+}
   li{
     font-size: 1.4rem;
     list-style-type: none;

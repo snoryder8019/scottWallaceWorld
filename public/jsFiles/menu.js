@@ -12,7 +12,6 @@ const loadDelay = 5000;
 // };
 
 const delayedAnnie = function delayedAnnie0(){
-
   buttonGlobe.style.display='block';
   loadScreen.style.display='none';
 };

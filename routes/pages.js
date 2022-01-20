@@ -27,6 +27,9 @@ router.get('/submission',(req, res) => {
 router.get('/masking',(req, res) => {
   res.render('pages/masking',{title:'masking'})
 });
+router.get('/contact',(req, res) => {
+  res.render('pages/contact',{title:'contact'})
+});
 router.get('/resume',(req, res) => {
   res.render('pages/resume',{title:'resume'})
   console.log('resume hit')

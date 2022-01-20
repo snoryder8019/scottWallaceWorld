@@ -51,7 +51,7 @@ form option {
 }
 @media screen and (min-width: 600px) {
   .logoFont {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -131,7 +131,6 @@ form option {
 }
 
 .buttonClip {
-  z-index: 51;
   min-width: 15%;
   min-height: 180px;
   -webkit-mask-type: alpha;
@@ -157,6 +156,9 @@ form option {
 }
 .menu ul, .menu span {
   padding: 3%;
+}
+.menu .menuList ul {
+  z-index: 60;
 }
 .menu li {
   font-size: 1.4rem;

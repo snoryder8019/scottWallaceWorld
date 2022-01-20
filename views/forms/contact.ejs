@@ -1,13 +1,19 @@
+
 <div  id="contact">
   <br><br>
 <h1>Contact My World</h1>
 <br>
-<form action="postData" method="POST">
+<form action="/contactform" method="POST">
   <label for="fname"> Your Name</label> <br>
-  <input type="text" id="fname" name="fname"><br>
+  <input type="text" id="fname" name="fname" required><br>
 
     <label for="email">Email</label> <br>
-    <input type="text" id="email" name="email">
-<button type="button" name="button">submit</button>
+    <input type="text" id="email" name="email" required><br>
+
+    <label for="message">Relay a message here!</label> <br>
+    <input type="text" id="message" name="message" required><br>
+
+
+<button type="submit" name="button">submit</button>
 </form>
 </div>
