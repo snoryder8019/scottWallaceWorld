@@ -62,6 +62,7 @@ router.post('/contactform', (req,res) => {
   console.log("posts initiated")
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
+    port:2525,
     auth:{
        //type:'OAuth2',
         user: process.env.EMAILNAME,
