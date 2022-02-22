@@ -3,26 +3,37 @@ const resume = document.getElementById('resPage');
 const colorDiv = document.getElementById('colorDiv');
 const buttonGlobe = document.getElementById('buttonGlobe');
 const loadScreen = document.getElementById('loadScreen');
-const loadDelay = 5000;
-//var pageHandle = [resume,0];
-// function pageCloser(){
-//   for(x=0;x<pageHandle.length;x++){
-//     pageHandle[x].style.opacity="0";
-//   }
-// };
 
-const delayedAnnie = function delayedAnnie0(){
+const intro0 = document.getElementById('introMainPage');
+const loadDelay = 5000;//5000
+const introMsgClear = 9000;//9000
+const introduce = document.getElementById('introduce');
+const domIT0=document.getElementById('domIT0');
+var domITArray=[domIT0];
+
+
+let delayedAnnie = function delayedAnnie0(){
   buttonGlobe.style.display='block';
   loadScreen.style.display='none';
 };
+let delayedClear = function delayedClear0(){
+  let title0 = document.getElementById('indexTitle0');
+let title1 = document.getElementById('indexTitle1');
+  title0.style.display='none';
+  title1.style.display='none';
+  intro0.style.display='block';
+
+}
 //
 //controls loading spinner
 function loadScreenOn(){
   console.log('loadScreenON');
   if(loadScreen===null){}else{
+
   loadScreen.style.display='block';
 buttonGlobe.style.display='none';
 setTimeout(delayedAnnie,loadDelay);
+setTimeout(delayedClear,introMsgClear);
 }
 };
 //
@@ -32,7 +43,7 @@ function maskingFunc(){
   else{
     var inH = window.innerHeight;
     var inW = window.innerWidth;
-    const e = window.event;
+   
   colorDiv.addEventListener('mousemove',function(){
   let x= window.event.screenX;
   let y= window.event.screenY;
@@ -69,10 +80,15 @@ function resPage(){
     console.log('else resPage()');
   }
 };
+
+
 //
 //event listeners called "onload" in the body
 function popLoader(){
   loadScreenOn();
   maskingFunc();
+  //domCopy();
+// canvasDraw();
+
 console.log('listeners Added')
 }

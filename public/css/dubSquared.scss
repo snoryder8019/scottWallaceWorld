@@ -56,14 +56,22 @@ h1{
   color:$swwTeal9;
 }
 }
+#contact{
+  width:100vw;
+  text-align: center;
+}
 form{
   width:100%;
+  text-align: center;
   input{
-
+height:35px;
+width:90%;
+margin:0;
+padding:0;
   }
   select{
     margin:1%;
-    paddin:2%;
+    padding:2%;
     font-size: 1rem;
     font-weight: 800;
   min-height: 50px;
@@ -442,12 +450,11 @@ left:3%;
 }
 .canvas{
   z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-width:80%;
-margin: 10%;
-  min-height:80vh;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+width:80px;
+height:80px;
   border:1px dotted white;
 }
 #loaderMessage{
@@ -565,8 +572,10 @@ margin: 10%;
 }
 .indexTitle0{
   animation: 1.8s ease-in 5s slideInFromTop;
+  display:block;
 }
 .indexTitle1{
   animation: 1.2s ease-out 5s slideInFromLeft;
+  display:block;
 
 }
