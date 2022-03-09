@@ -42,6 +42,11 @@ form option {
   color: white;
 }
 
+.trans {
+  transform-style: preserve-3d;
+  transition-duration: 1.8s;
+}
+
 .mainContent {
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
@@ -157,7 +162,7 @@ form option {
 .menu {
   font-family: mplus;
   z-index: 50;
-  background-color: rgba(150, 70, 70, 0.9);
+  background-color: rgba(150, 70, 70, 0.95);
   position: fixed;
   top: 0;
   left: -100vw;
@@ -239,6 +244,11 @@ form option {
   text-align: center;
   text-decoration: overline;
   color: rgba(35, 185, 185, 0.9);
+  transform-style: preserve-3d;
+  transition-duration: 0.8s;
+}
+.resume h3:hover {
+  transform: scale(1.2);
 }
 .resume h6 {
   margin: 0;
@@ -679,6 +689,10 @@ form option {
 .indexTitle1 {
   animation: 1.2s ease-out 5s slideInFromLeft;
   display: block;
+}
+
+#techHistoryDiv, #leadershipDiv, #techSkillsDiv, #backgroundDiv, #abstractDiv, #mygoalsDiv {
+  display: none;
 }
 
 /*# sourceMappingURL=dubSquared.css.map */

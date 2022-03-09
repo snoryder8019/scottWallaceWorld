@@ -90,10 +90,16 @@ padding:0;
     color:white;
   }
 }
+
+.trans{
+  transform-style: preserve-3d;
+  transition-duration: 1.8s;
+}
 .header{
 
 
 }
+
 .mainContent{@include mainRegular(rgba(0,0,0,0))}
 // .background{
 //   opacity: .3;
@@ -268,7 +274,13 @@ font-family:"quest"
     text-align: center;
     text-decoration: overline;
     color: $swwTeal9;
+    transform-style: preserve-3d;
+    transition-duration: .8s;
+  &:hover{
+transform: scale(1.2);
   }
+  }
+  
 h6{
   //text-align: center;
   margin: 0;
@@ -277,6 +289,7 @@ h6{
     width:40%;
     margin-left:30%;
   }
+  
 }
 #techSkills{
   column-count: 2;
@@ -578,4 +591,8 @@ height:80px;
   animation: 1.2s ease-out 5s slideInFromLeft;
   display:block;
 
+}
+
+#techHistoryDiv,#leadershipDiv,#techSkillsDiv,#backgroundDiv,#abstractDiv,#mygoalsDiv{
+  display:none;
 }
