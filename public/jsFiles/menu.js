@@ -9,7 +9,42 @@ const loadDelay = 5000;//5000
 const introMsgClear = 9000;//9000
 const introduce = document.getElementById('introduce');
 const domIT0=document.getElementById('domIT0');
+
+
 var domITArray=[domIT0];
+
+
+// const techHistoryDiv = document.getElementById('techHistoryDiv');
+// const leadershipDiv = document.getElementById('leadershipDiv');
+// const techSkillsDiv = document.getElementById('teckSkillsDiv');
+// const backgroundDiv = document.getElementById('backgroundDiv');
+// const abstractDiv = document.getElementById('abstractDiv');
+// const mygoalsDiv = document.getElementById('mygoalsDiv');
+// //
+// const techHistory = document.getElementById('techHistory');
+// const leadership = document.getElementById('leadership');
+// const techSkills = document.getElementById('teckSkills');
+// const background = document.getElementById('background');
+// const abstract = document.getElementById('abstract');
+// const mygoals = document.getElementById('mygoals');
+// //
+// const resumeArray= [techHistoryDiv,leadershipDiv,techSkillsDiv,backgroundDiv,abstractDiv,mygoalsDiv];
+// const resumeBody= [techHistory,leadership,techSkills,background,abstract,mygoals];
+
+// function collapse(){
+//   for (i=0;i<resumeArray.length;i++){
+//    var xx=resumeArray[i];
+//   xx.addEventListener('click',function(){
+//   var xy=resumeBody[i];
+//   if(xy.style.display==="block"){
+//     xy.style.display="none";
+//     }else{
+//       xy.style.display="block";
+//     }
+// });
+// }
+
+// }
 
 
 let delayedAnnie = function delayedAnnie0(){
@@ -87,6 +122,7 @@ function resPage(){
 function popLoader(){
   loadScreenOn();
   maskingFunc();
+ // collapse();
   //domCopy();
 // canvasDraw();
 

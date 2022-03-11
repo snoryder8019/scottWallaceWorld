@@ -10,7 +10,7 @@ const mygoalsDiv = document.getElementById('mygoalsDiv');
 
 
 function collapse($zzy){
-    console.log('collapse')
+
     if($zzy.style.display==="block"){
 $zzy.style.display="none";
 }else{

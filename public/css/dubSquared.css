@@ -162,7 +162,7 @@ form option {
 .menu {
   font-family: mplus;
   z-index: 50;
-  background-color: rgba(150, 70, 70, 0.95);
+  background-color: rgba(150, 70, 70, 0.9);
   position: fixed;
   top: 0;
   left: -100vw;
@@ -692,7 +692,8 @@ form option {
 }
 
 #techHistoryDiv, #leadershipDiv, #techSkillsDiv, #backgroundDiv, #abstractDiv, #mygoalsDiv {
-  display: none;
+  display: block;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=dubSquared.css.map */

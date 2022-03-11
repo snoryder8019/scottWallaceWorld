@@ -594,5 +594,6 @@ height:80px;
 }
 
 #techHistoryDiv,#leadershipDiv,#techSkillsDiv,#backgroundDiv,#abstractDiv,#mygoalsDiv{
-  display:none;
+  display:block;
+  z-index: 100;
 }
