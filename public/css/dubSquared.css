@@ -117,8 +117,8 @@ form option {
   background: linear-gradient(to left, rgba(35, 185, 185, 0.9), rgba(150, 70, 70, 0.9));
   background-size: contain;
   position: fixed;
-  bottom: 4%;
-  left: 3%;
+  top: 2%;
+  right: 3%;
   transition-duration: 0.4s;
   transform-style: preserve-3d;
   animation: 4s ease-in 5s hightLightIt;
@@ -271,14 +271,17 @@ form option {
 }
 
 #tickerbar {
-  filter: brightness(0.3);
+  display: block;
+  filter: brightness(0.8);
   position: absolute;
   min-height: 45px;
   width: 1500px;
   bottom: 38%;
-  right: -80%;
+  right: -270%;
   margin-left: 55px;
   overflow: hidden;
+  transform-style: flat;
+  transition-duration: 0.8s;
   margin: 0;
   padding: 0;
 }

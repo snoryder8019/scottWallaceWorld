@@ -12,7 +12,29 @@ const domIT0=document.getElementById('domIT0');
 
 
 var domITArray=[domIT0];
+const tickerbar = document.getElementById('tickerbar');
 
+function slider(){
+  console.log('slider on')
+ let xxy=-247;
+
+ setInterval(function(){
+   if(xxy>90){
+     console.log('if logic')
+     tickerbar.style.opacity="0"
+     tickerbar.style.display="none";
+     console.log(tickerbar.style.display);
+    xxy=-270;
+  
+   }else{
+    tickerbar.style.display="block";
+    tickerbar.style.opacity="100";
+  let divStr=xxy+"%";
+  tickerbar.style.right=divStr;
+  xxy++;
+  console.log(xxy)
+  } },100)
+}
 
 // const techHistoryDiv = document.getElementById('techHistoryDiv');
 // const leadershipDiv = document.getElementById('leadershipDiv');
@@ -51,14 +73,14 @@ let delayedAnnie = function delayedAnnie0(){
   buttonGlobe.style.display='block';
   loadScreen.style.display='none';
 };
-let delayedClear = function delayedClear0(){
-  let title0 = document.getElementById('indexTitle0');
-let title1 = document.getElementById('indexTitle1');
-  title0.style.display='none';
-  title1.style.display='none';
-  intro0.style.display='block';
+// let delayedClear = function delayedClear0(){
+//   let title0 = document.getElementById('indexTitle0');
+// let title1 = document.getElementById('indexTitle1');
+//   title0.style.display='none';
+//   title1.style.display='none';
+//   intro0.style.display='block';
 
-}
+// }
 //
 //controls loading spinner
 function loadScreenOn(){
@@ -68,7 +90,7 @@ function loadScreenOn(){
   loadScreen.style.display='block';
 buttonGlobe.style.display='none';
 setTimeout(delayedAnnie,loadDelay);
-setTimeout(delayedClear,introMsgClear);
+//setTimeout(delayedClear,introMsgClear);
 }
 };
 //
@@ -125,6 +147,6 @@ function popLoader(){
  // collapse();
   //domCopy();
 // canvasDraw();
-
+slider();
 console.log('listeners Added')
 }

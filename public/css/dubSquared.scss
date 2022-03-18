@@ -172,8 +172,8 @@ font-family:"quest"
   background: linear-gradient(to left,$swwTeal9,$swwSalmon9);
   background-size:contain;
   position:fixed;
-  bottom:4%;
-  left:3%;
+  top:2%;
+  right:3%;
   transition-duration: .4s;
   transform-style: preserve-3d;
     animation: 4s ease-in 5s  hightLightIt;
@@ -300,15 +300,17 @@ h6{
   margin:0 4%;
 }
 #tickerbar{
-  filter:brightness(.3);
+  display: block;
+  filter:brightness(.8);
   position:absolute;
   min-height: 45px;
   width:1500px;
   bottom:38%;
-  right:-80%;
+  right:-270%;
   margin-left: 55px;
   overflow: hidden;
-
+transform-style:flat;
+transition-duration: .8s;
   //position:absolute;
 @include myMargins(0,0);
 }
