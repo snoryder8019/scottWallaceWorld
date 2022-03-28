@@ -32,7 +32,7 @@ function slider(){
   let divStr=xxy+"%";
   tickerbar.style.right=divStr;
   xxy++;
-  console.log(xxy)
+  //console.log(xxy) <---use for debugging
   } },100)
 }
 

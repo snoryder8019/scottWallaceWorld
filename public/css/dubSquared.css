@@ -699,4 +699,31 @@ form option {
   z-index: 100;
 }
 
+@keyframes easeInfo() {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.miniMessage, .playerScore {
+  font-family: "mplus";
+  color: rgba(150, 70, 70, 0.9);
+  animation: "easeInfo" 1.2s ease-out 1;
+  font-size: 3rem;
+}
+
+.miniGame {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.miniSpace {
+  text-align: center;
+  font-size: 3rem;
+  min-height: 80px;
+  border: 1px dotted rgba(35, 185, 185, 0.9);
+}
+
 /*# sourceMappingURL=dubSquared.css.map */
