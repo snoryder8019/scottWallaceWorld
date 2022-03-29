@@ -24,6 +24,8 @@ function gameReset(){
   for (let i=0;i<sqArray.length;i++){
     sqArray[i].innerHTML="";
     }
+    player1.style.backgroundColor="rgba(100,100,100,.5)";
+    player2.style.backgroundColor="rgba(0,0,0,0)";
  
 }
 function resetScore(){
@@ -31,7 +33,10 @@ function resetScore(){
   player2Score=0;
 }
 function gameStart(){
-  miniMessage.innerHTML="player 1 Go!"
+  startButt.style.display="none";
+  miniMessage.innerHTML="player 1 Go!";
+  player1.style.backgroundColor="rgba(100,100,100,.5)";
+  player2.style.backgroundColor="rgba(0,0,0,0)";
    console.log('gameStart Inititated'+" firstPlayer:"+firstPlayer+" "+typeof(firstPlayer));
   /////
     firstPlayer=0;
@@ -42,10 +47,14 @@ for (let i=0;i<sqArray.length;i++){
        window.event.target.innerHTML="X";
     firstPlayer=1;
     miniMessage.innerHTML="player 2 Go!";
+    player1.style.backgroundColor="rgba(0,0,0,0)";
+    player2.style.backgroundColor="rgba(100,100,100,.5)";
   }else{
     window.event.target.innerHTML="O";
    firstPlayer=0;
    miniMessage.innerHTML="player 1 Go!";
+   player1.style.backgroundColor="rgba(100,100,100,.5)";
+    player2.style.backgroundColor="rgba(0,0,0,0)";
   }
    });}
 
@@ -59,10 +68,12 @@ for (let i=0;i<sqArray.length;i++){
       sq2.innerHTML==="X"&&sq4.innerHTML==="X"&&sq6.innerHTML==="X"||
       sq0.innerHTML==="X"&&sq4.innerHTML==="X"&&sq8.innerHTML==="X"
       ){
-      startButt.innerHTML="player 1 wins..keep playing";
+      miniMessage.innerHTML="player 1 wins..keep playing";
+      player1.style.backgroundColor="rgba(0,150,50,.2)";
+      player2.style.backgroundColor="rgba(0,0,0,0)";
       player1Score++;
      player1.innerHTML="Player 1: "+player1Score;
-      gameReset();
+      setTimeout(gameReset,2500);
     }else if(sq0.innerHTML==="O"&&sq1.innerHTML==="O"&&sq2.innerHTML==="O"||
     sq3.innerHTML==="O"&&sq4.innerHTML==="O"&&sq5.innerHTML==="O"||
     sq6.innerHTML==="O"&&sq7.innerHTML==="O"&&sq8.innerHTML==="O"||
@@ -72,10 +83,12 @@ for (let i=0;i<sqArray.length;i++){
     sq2.innerHTML==="O"&&sq4.innerHTML==="O"&&sq6.innerHTML==="O"||
     sq0.innerHTML==="O"&&sq4.innerHTML==="O"&&sq8.innerHTML==="O"
      ){
-      startButt.innerHTML="player 2 wins..keep playing";
+      miniMessage.innerHTML="player 2 wins..keep playing";
+      player1.style.backgroundColor="rgba(0,0,0,0)";
+      player2.style.backgroundColor="rgba(0,150,50,.2)";
       player2Score++;
       player2.innerHTML="Player 2: "+player2Score;
-      gameReset();
+      setTimeout(gameReset,2000);
      
     }else{}
   });

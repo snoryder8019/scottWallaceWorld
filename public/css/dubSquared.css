@@ -716,14 +716,26 @@ form option {
 
 .miniGame {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 3fr 3fr 3fr;
+  z-index: 2000;
 }
 
+@keyframes colorWild {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(180deg);
+  }
+}
 .miniSpace {
+  color: rgba(35, 185, 185, 0.9);
+  vertical-align: middle;
   text-align: center;
   font-size: 3rem;
   min-height: 80px;
   border: 1px dotted rgba(35, 185, 185, 0.9);
+  animation: 5s ease-in-out 0s infinite colorWild;
 }
 
 /*# sourceMappingURL=dubSquared.css.map */
