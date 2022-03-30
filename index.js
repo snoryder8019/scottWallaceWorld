@@ -47,6 +47,7 @@ app.use(routerBloger);
 //
 
 //SET SERVER
+
   console.log('\nNode Starting up on port:('+port+')!! \n\n*****started at***** \n'+Date());
   console.log('********************\nfind app @ www.scottwallace.world');
 app.listen(port);

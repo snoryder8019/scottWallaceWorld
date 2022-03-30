@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 //time variables
 const date = new Date();
@@ -11,8 +12,13 @@ let showTime = hours+':'+minutes;
 //******HOMEPAGE**********
 router.get('/',(req, res) => {
   res.render('pages/index',{title:'Homepage'})
-  console.log(showTime+'Index route hit & data logged successfully'+req.ip);
-  });
+ 
+  fs.appendFile('logs/startup_log.txt', "\n"+showTime+'Index hit from: '+req.ip,
+  function(err){
+    if (err) throw err;
+    console.log(req.ip+' filed to startup_log.txt')
+  })
+});
 //contact form
 router.get('/sandbox',(req, res) => {
   res.render('pages/sandbox',{title:'sandbox'})
