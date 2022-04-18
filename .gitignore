@@ -4,3 +4,4 @@ routes/.env
 /.env
 /client
 /views/partials/logs.ejs
+/config

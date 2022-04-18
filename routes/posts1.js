@@ -3,16 +3,29 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const nodemailer = require('nodemailer');
-
+// const { MongoClient } = require('mongodb');
+// const uri = "mongodb+srv://"+process.env.DB_USER+":"+process.env.DB_PASS+"@cluster0.tpmae.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// const mongoose = require('mongoose');
 let alert = require('alert');
 
-const env = require('dotenv').config();
+const dotenv = require('dotenv').config();
+// const user = {
+//   name:${fname},
+//   email:${email},
+//   message:${message}
+// }
+
+
 //time variables
 
 const date = new Date();
 let hours = date.getHours();
 let minutes = date.getMinutes();
 let showTime = hours+':'+minutes;
+
+
+
 
 //CONTACT FORM POST
 router.post('/sendData', (req,res) => {
@@ -28,51 +41,20 @@ router.post('/contactQuerry', (req,res) =>{
 
 });
 router.post('/contactform', (req,res) => {
-
-///////////////////////
-
-const { MongoClient} = require('mongodb');
-
-async function main(){
-const uri = "mongodb+srv://"+process.env.MONGOUSER+":"+encodeURIComponent(process.env.MONGOPASS)+"@cluster0.tpmae.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri);
- // connection async try catch 
-try {
-  await client.connect();
-  //main function durin db call
-
-  //call another function
-  await createUser(client,{
-    name: req.body.fname,
-    email: req.body.email,
-    message : req.body.message
-  });
-}catch (err){
-  console.log(err)
-}finally{
-  await client.close();
-}
-}
-main().catch(console.error);
-
-async function createUser(client,newUser){
- const result = await client.db("users").collection("users").insertOne(newUser);
-
- console.log('new user id: '+result.insertedId+'\n email: '+ req.body.email)
-
-}
-//async function in connection call
-async function listDatabases(client){
-  const databasesList =  await client.db().admin().listDatabases();
-//handle return information
-  console.log("databases:");
-databasesList.databases.forEach(db =>{
-  console.log('-'+db.name);
-})
-}
+  // client.connect(err => {
+  //   db.collection('inventory').insertOne({
+  //     item: req.body.fname,
+  //     qty: req.body.email,
+  //     tags: ['cotton'],
+  //     size: { h: 28, w: 35.5, uom: 'cm' }
+  //   });
+  //   // perform actions on the collection object
+  //   console.log('mongo GO!')
+  //   client.close();
+  // });
 
 
-/////////////////////
+
 
   console.log("posts initiated")
   let transporter = nodemailer.createTransport({
