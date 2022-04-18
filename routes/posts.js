@@ -77,7 +77,7 @@ databasesList.databases.forEach(db =>{
   console.log("posts initiated")
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
-    port:2525,
+    port:465,
     auth:{
        //type:'OAuth2',
         user: process.env.EMAILNAME,
