@@ -77,7 +77,7 @@ databasesList.databases.forEach(db =>{
   console.log("posts initiated")
   let transporter = nodemailer.createTransport({
     service: 'Gmail',
-    port:465,
+    port:587,
     auth:{
        //type:'OAuth2',
         user: process.env.EMAILNAME,
@@ -94,7 +94,7 @@ databasesList.databases.forEach(db =>{
         //to:'zgravityinflatables@gmail.com',
         subject:'SCOTTWALLACE.WORLD SUBMISSION',
         text: req.body.message,
-        html:'<h1>User Submission </h1><br><h2>'+req.body.message+'</h2>'
+        html:'<h1><span class="logoFont">User Submission</span> </h1><br><h2>'+req.body.message+'</h2>'
     };
     transporter.sendMail(mailOptions,function(error,info){
         if(error){
