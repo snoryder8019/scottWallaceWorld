@@ -1,13 +1,14 @@
 const express = require('express');
-
+const Joi = require('joi');
 const router = express.Router();
 const fs = require('fs');
 const nodemailer = require('nodemailer');
-
+//const client = require('../config/mongo.js')
 let alert = require('alert');
-
+const { nextTick } = require('process');
 const env = require('dotenv').config();
 //time variables
+const client = require('../config/mongo.js')
 
 const date = new Date();
 let hours = date.getHours();
@@ -16,8 +17,20 @@ let showTime = hours+':'+minutes;
 
 //CONTACT FORM POST
 router.post('/sendData', (req,res) => {
+//add some middleware here to check for minibattle and load information. 
+if(req.body.sandbox!='miniBattle'){
   console.log('querried '+req.body.sandbox)
         res.render('pages/'+req.body.sandbox);
+}else{
+  console.log('middle battle ware');
+/////
+
+// async function playerSelect(client,  bmdata){
+// const data = await client.db('miniBattle').collection('miniBattler').findMany(bm)
+//  ) 
+  console.log('querried '+req.body.sandbox)
+  res.render('pages/'+req.body.sandbox);
+}
 });
 
 router.post('/blogPost', (req,res) => {
@@ -28,14 +41,8 @@ router.post('/contactQuerry', (req,res) =>{
 
 });
 router.post('/contactform', (req,res) => {
-
-///////////////////////
-
-const { MongoClient} = require('mongodb');
-
 async function main(){
-const uri = "mongodb+srv://"+process.env.MONGOUSER+":"+encodeURIComponent(process.env.MONGOPASS)+"@cluster0.tpmae.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri);
+
  // connection async try catch 
 try {
   await client.connect();
@@ -57,23 +64,8 @@ main().catch(console.error);
 
 async function createUser(client,newUser){
  const result = await client.db("users").collection("users").insertOne(newUser);
-
- console.log('new user id: '+result.insertedId+'\n email: '+ req.body.email)
-
+ console.log('new user id: '+result.insertedId+'\n email: '+ req.body.email+'from IP: '+ req.body.ip)
 }
-//async function in connection call
-async function listDatabases(client){
-  const databasesList =  await client.db().admin().listDatabases();
-//handle return information
-  console.log("databases:");
-databasesList.databases.forEach(db =>{
-  console.log('-'+db.name);
-})
-}
-
-
-/////////////////////
-
   console.log("posts initiated")
   let transporter = nodemailer.createTransport({
     service: 'Gmail',

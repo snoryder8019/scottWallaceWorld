@@ -209,7 +209,13 @@ font-family:"quest"
   transition-duration: .4s;
   transform-style: preserve-3d;
 }
-.menu{
+#battleMenuBtn{
+  float: right;
+}
+#bmRegister , #bmFind, #bmSelect, #bmFight{
+  display: none;
+}
+.menu, #battleMenu{
   font-family: mplus;
   z-index:50;
   background-color: $swwSalmon9;

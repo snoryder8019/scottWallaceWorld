@@ -159,7 +159,15 @@ form option {
   transform-style: preserve-3d;
 }
 
-.menu {
+#battleMenuBtn {
+  float: right;
+}
+
+#bmRegister, #bmFind, #bmSelect, #bmFight {
+  display: none;
+}
+
+.menu, #battleMenu {
   font-family: mplus;
   z-index: 50;
   background-color: rgba(150, 70, 70, 0.9);
@@ -171,23 +179,23 @@ form option {
   transition-duration: 0.4s;
   transform-style: preserve-3d;
 }
-.menu ul, .menu span {
+.menu ul, .menu span, #battleMenu ul, #battleMenu span {
   padding: 3%;
 }
-.menu .menuList ul {
+.menu .menuList ul, #battleMenu .menuList ul {
   z-index: 60;
 }
-.menu li {
+.menu li, #battleMenu li {
   font-size: 1.4rem;
   list-style-type: none;
   padding-left: 0;
   font-weight: 800;
 }
-.menu a {
+.menu a, #battleMenu a {
   color: white;
   text-decoration: none;
 }
-.menu a:hover {
+.menu a:hover, #battleMenu a:hover {
   color: yellow;
 }
 

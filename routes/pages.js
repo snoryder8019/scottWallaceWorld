@@ -11,7 +11,7 @@ let showTime = hours+':'+minutes;
 
 //******HOMEPAGE**********
 router.get('/',(req, res) => {
-  res.render('pages/index',{title:'Homepage'})
+  res.render('pages/index',{title:'Web Developer | Scott Wallace | Portfolio'})
  
   fs.appendFile('logs/startup_log.txt', "\n"+showTime+'Index hit from: '+req.ip,
   function(err){
@@ -21,7 +21,32 @@ router.get('/',(req, res) => {
 });
 //contact form
 router.get('/sandbox',(req, res) => {
-  res.render('pages/sandbox',{title:'sandbox'})
+ ////
+ async function listEm(client){
+  const player1= await client.db('miniBattle').collection('miniBattler').findOne({name:"Scott"});
+  if (player1){
+    console.log(player1)
+  }else{
+    console.log('no Hero Found')
+  }
+ }
+
+async function listHeroes(){
+  try{
+  await client.connect();
+  await listEm(client);
+}catch(err){
+  console.log('err: '+err)
+}finally{
+  await client.close();
+  }
+}
+
+listHeroes().catch(console.error)
+////
+
+  res.render('pages/sandbox',{title:'sandbox',player:player1.name})
+ 
   console.log('**************\nsomeone is playing in the sandbox!!  \n'+date)
 });
 router.get('/scottsDash',(req, res) => {

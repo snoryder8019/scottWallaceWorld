@@ -1,29 +1,32 @@
+const battleMenuBtn = document.getElementById('battleMenuBtn');
+const battleMenu = document.getElementById('battleMenu');
+const bmRegister= document.getElementById('bmRegister');
+const bmSelect= document.getElementById('bmSelect');
+const bmFind= document.getElementById('bmFind');
+const bmFight = document.getElementById('bmFight');
+let bmMenu = [bmRegister,bmSelect,bmFind,bmFight];
 
-
-
-const miniMeggase = document.getElementById('miniMeggase');
-const player1 = document.getElementById('player1');
-const npc1 = document.getElementById('npc1');
-
-let PlayerMage = class {
-  constructor(playerName){
-  this.playerName=playerName;
-  this.classType="mage";
-  this.baseHP=78;
-  this.baseAttack=40;
-  this.baseMagic=80;
+function battleMenuOpen(){
+  console.log('bm')
+  if (battleMenu.style.left!='0vw'){
+    console.log('if menuOpen()');
+    battleMenu.style.left='0vw'
+    }
+else{
+  console.log('else menuOpen()')
+  battleMenu.style.left='-100vw'
 }
+};
+function battleFunction(xxy){
+
+if(xxy.style.display=="block"){
+  xxy.style.display="none";
+}else{
+  for (let y=0;y<bmMenu.length;y++){
+    bmMenu[y].style.display="none";
+    xxy.style.border="none";
+   }
+xxy.style.display="block";
+
 }
-const player01 = new PlayerMage("scott", "warrior");
-
-
-function playerStats(){
-  console.log(player01);
-  console.log(player1);
-  player1.innerHTML=
-  player01.playerName+"<br>"+
-  player01.classType+"<br>"+
-  player01.baseHP+"<br>"+
-  player01.baseAttack+"<br>"
-  ;
 }

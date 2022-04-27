@@ -12,7 +12,7 @@ var aeGroup = [
 ];
 let x=0;
 function slider(){
-  let aeTitlte = document.getElementById('aeTitle');
+  let aeTitle = document.getElementById('aeTitle');
   if(x>=aeGroup.length&&x!=0){
     x=0;
     aeTitle.innerHTML=aeGroup[x];

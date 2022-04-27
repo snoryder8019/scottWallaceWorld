@@ -1,9 +1,49 @@
 <h1>mini Battle Practice</h1>
-<div id="miniMessage">miniMessgae</div>
-<div onclick="playerStats()"id="player1">Player 1 Stats</div>
-<div id="npc1">NPC Stats</div>
-<div></div>
-<div id="player1Image">Player Image</div>
-<div id="npcImage">NPC Image</div>
 
-<script src="../jsFiles/miniBattle.js"></script>
+<div id="bmRegister">
+<form action="/miniBattle" method="POST">
+    <label for="fname"> Your Name</label> <br>
+    <input type="text" id="fname" name="fname" required><br>
+  
+      <label for="email">Email</label> <br>
+      <input type="text" id="email" name="email" required><br>
+  
+      <label for="class">Select Hero Class~Mage Warrior Assasain</label> <br>
+      <input type="text" id="class" name="class" required><br>
+  
+  
+  <button type="submit" name="button">submit</button>
+  </form>
+</div>
+
+<div id="bmFind">
+  <form action="/lookupHero" method="POST">
+  <label for="nameLookup">Search for Hero</label> <br>
+  <input type="text" id="nameLookup" name="nameLookup" required><br>
+<button type="submit" name="button">submit</button>
+  </form>
+  </div>
+
+<div id="bmSelect">
+<form>
+<select for="player1Select">
+<h1><%= player1.name %></h1>
+</select>
+</form>
+</div>
+
+
+<div id="bmFight">fight</div>
+
+
+<div id="battleMenu">battlemenu
+  <ul>
+    <li onclick="battleFunction(bmRegister)">Registerss</li>
+    <li onclick="battleFunction(bmSelect)">Select Hero</li>
+    <li onclick="battleFunction(bmFind)">Find Hero</li>
+    <li onclick="battleFunction(bmFight)">Fight</li>
+  </ul>
+</div>
+
+<button onclick="battleMenuOpen()" id="battleMenuBtn">Battle Menu</button>
+<script src="jsFiles/miniBattle.js"></script>
