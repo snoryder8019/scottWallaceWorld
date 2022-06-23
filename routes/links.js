@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/blc',(req,res)=>{
+    console.log("outbound count function needed BALC")
 res.redirect('http://www.badassladiesclub.com')});
 router.get('/valrick',(req,res)=>{
 res.redirect('http://www.valricktravels.com')});

@@ -9,7 +9,8 @@ const loadDelay = 5000;//5000
 const introMsgClear = 9000;//9000
 const introduce = document.getElementById('introduce');
 const domIT0=document.getElementById('domIT0');
-
+const consoleGreen = 'font-size:40;color:"Green"';
+const welcomeDevs = "%c"+" Hi! I'm Scott. Grateful you have checked out under the hood. \n\n This is completely coded by me using NodeJs, Express, and EJS to deliver a static website with a PWA supported engine and functionality. \n\n I love community reach out on twitter @scottyDubSquare \n\n fotrgive the bugs and dead ends, as I am trying to find the time to polish all my projects and what has become a complicated portfolio for me to develop. \n\n I am seeking a team to help work with so I gain experience in a devop environment. What projects do you need help with?";
 
 var domITArray=[domIT0];
 const tickerbar = document.getElementById('tickerbar');
@@ -84,7 +85,7 @@ let delayedAnnie = function delayedAnnie0(){
 //
 //controls loading spinner
 function loadScreenOn(){
-  console.log('loadScreenON');
+  console.log(welcomeDevs, consoleGreen);
   if(loadScreen===null){}else{
 
   loadScreen.style.display='block';
