@@ -216,6 +216,7 @@ font-family:"quest"
   display: none;
 }
 .menu, #battleMenu{
+
   font-family: mplus;
   z-index:50;
   background-color: $swwSalmon9;
@@ -230,8 +231,14 @@ font-family:"quest"
   ul , span{
     padding:3%;
   }
+  .menuBox{
+    z-index: 20;
+    overflow-y: scroll;
+    position: relative;
+  }
   .menuList{
-  ul{  z-index: 60
+  ul{  z-index: 60;
+  
   }
 }
   li{
@@ -308,6 +315,7 @@ h6{
   margin:0 4%;
 }
 #tickerbar{
+  z-index: 19;
   display: block;
   filter:brightness(.8);
   position:absolute;
@@ -640,4 +648,15 @@ min-height: 80px;
 border: 1px dotted $swwTeal9;
 animation:  5s ease-in-out  0s infinite colorWild;
 
+}
+
+.promptSwitch{
+background-color: gray;
+z-index: 200;
+}
+.imgPrompt{
+ max-width: 20%;
+ border: red 1px solid;
+ filter: hue-rotate(30);
+ background-color: grey;
 }

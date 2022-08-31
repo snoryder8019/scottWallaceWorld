@@ -16,13 +16,15 @@ app.use(express.urlencoded( {extended: true} ))
 //middle static files
 app.use(express.static('public'));
 //route paths
-const miniBattle = require(__dirname+'/routes/miniBattle.js')
+
+const miniBattle = require(__dirname+'/routes/miniBattle.js');
 const routerHandle= require(__dirname+'/routes/pages.js');
 const routePosts= require(__dirname+'/routes/posts.js');
 const routeLinks= require(__dirname+'/routes/links.js');
 const routeBlogs= require(__dirname+'/routes/blogs.js');
 const routerBloger = require(__dirname+'/routes/blogs/blogs.js');
 //route app.use
+
 app.use(routerHandle);
 app.use(miniBattle);
 app.use(routePosts);

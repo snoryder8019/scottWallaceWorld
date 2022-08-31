@@ -12,13 +12,13 @@ let showTime = hours+':'+minutes;
 //******HOMEPAGE**********
 router.get('/',(req, res) => {
   res.render('pages/index',{title:'Web Developer | Scott Wallace | Portfolio'})
- 
-  fs.appendFile('logs/startup_log.txt', "\n"+showTime+'Index hit from: '+req.ip,
-  function(err){
-    if (err) throw err;
-    console.log(req.ip+' filed to startup_log.txt')
-  })
+ console.log('index hit at: '+Date())
+
 });
+//sandbox 2
+router.get('/sandboxV2',(req,res)=>{
+  res.render('pages/sb2');
+})
 //contact form
 router.get('/sandbox',(req, res) => {
  ////
@@ -42,10 +42,10 @@ async function listHeroes(){
   }
 }
 
-listHeroes().catch(console.error)
+//listHeroes().catch(console.error)
 ////
 
-  res.render('pages/sandbox',{title:'sandbox',player:player1.name})
+ res.render('pages/sandbox')
  
   console.log('**************\nsomeone is playing in the sandbox!!  \n'+date)
 });
@@ -58,6 +58,9 @@ router.get('/submission',(req, res) => {
 router.get('/masking',(req, res) => {
   res.render('pages/masking',{title:'masking'})
 });
+// router.get('/twitch',(req, res) => {
+//   res.render('pages/twitch',{title:'twitch'})
+// });
 router.get('/contact',(req, res) => {
   res.render('pages/contact',{title:'contact'})
 });
